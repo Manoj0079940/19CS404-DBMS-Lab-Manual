@@ -116,8 +116,8 @@ The program should display the employee details or an error message.
 - Use a parameterized cursor to accept a salary range as input and fetch employees within that range.
 - Implement exception handling to catch and display relevant error messages.
 
-  ## Program
-  ```
+## Program
+```
 ALTER TABLE employees1 ADD salary NUMBER;
 
 UPDATE employees1 SET salary = 75000 WHERE emp_id = 1; -- Alice
@@ -148,10 +148,11 @@ EXCEPTION
       DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
 END;
 /
-  ```
+ ```
 
 **Output:**  
 The program should display the employee details within the specified salary range or an error message if no data is found.
+
 ![image](https://github.com/user-attachments/assets/c27e1802-26c6-4706-b205-b8486e42f88f)
 
 
@@ -168,6 +169,7 @@ The program should display the employee details within the specified salary rang
 - Insert sample department numbers for employees.
 - Use a cursor FOR loop to fetch and display employee names along with their department numbers.
 - Implement exception handling to catch the relevant exceptions.
+
 ## Program
 ```
 SELECT table_name FROM user_tables WHERE table_name = 'EMPLOYEES1';
@@ -219,6 +221,7 @@ The program should display employee names with their department numbers or the a
 - Insert sample data into the `employees` table.
 - Declare a cursor using `%ROWTYPE` to fetch complete rows from the `employees` table.
 - Implement exception handling to catch the relevant exceptions and display appropriate messages.
+  
 ## Program
 ```
 DECLARE
@@ -263,6 +266,7 @@ The program should display employee records or the appropriate error message if 
 - Insert sample data into the `employees` table with different department numbers.
 - Use a cursor with the `FOR UPDATE` clause to lock the rows of employees in a specific department and update their salary.
 - Implement exception handling to handle `NO_DATA_FOUND` or other errors that may occur.
+  
 ## Program
 ```
 DECLARE
