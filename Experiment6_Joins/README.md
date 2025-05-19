@@ -129,6 +129,7 @@ WHERE
 
 **Question 5**
 ![image](https://github.com/user-attachments/assets/ac79d6f9-f2c8-4b5c-8309-f6e161bd7daf)
+
 ```
 SELECT 
     p.first_name AS patient_name, 
@@ -142,9 +143,9 @@ ON
 WHERE 
     p.date_of_birth > '1990-01-01';
 ```
-
 **Output:**
 ![image](https://github.com/user-attachments/assets/cf389ca4-98f0-4e17-89f0-4afcd37a9646)
+
 
 **Question 6**
 ![image](https://github.com/user-attachments/assets/c0fdba46-103d-4fb4-9eb5-14b35f8e4f09)
