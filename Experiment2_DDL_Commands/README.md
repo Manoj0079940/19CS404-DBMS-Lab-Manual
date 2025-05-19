@@ -104,125 +104,135 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
-
-```sql
--- Paste your SQL code below for Question 1
+Create a table named Orders with the following constraints: OrderID as INTEGER should be the primary key. OrderDate as DATE should be not NULL. CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
+```
+CREATE TABLE Orders(
+OrderID INTEGER PRIMARY KEY,
+OrderDate DATE NOT NULL,
+CustomerID INTEGER,
+FOREIGN KEY(CustomerID) REFERENCES Customers(CustomerID));
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/384596c6-38da-4694-a8c8-147f29481d39)
 
-![Output1](output.png)
 
 **Question 2**
----
--- Paste Question 2 here
-
-```sql
--- Paste your SQL code below for Question 2
+Create a table named Department with the following constraints: DepartmentID as INTEGER should be the primary key. DepartmentName as TEXT should be unique and not NULL. Location as TEXT.
 ```
-
+CREATE TABLE Department(
+DepartmentID INTEGER PRIMARY KEY,
+DepartmentName TEXT NOT NULL UNIQUE,
+Location TEXT);
+```
 **Output:**
+![image](https://github.com/user-attachments/assets/4e1bceb2-a51d-467b-8724-6119248122d1)
 
-![Output2](output.png)
 
 **Question 3**
----
--- Paste Question 3 here
-
-```sql
--- Paste your SQL code below for Question 3
+Create a table named Locations with the following columns: LocationID as INTEGER LocationName as TEXT Address as TEXT
 ```
-
+CREATE TABLE Locations(
+LocationID INTEGER,
+LocationName TEXT,
+Address TEXT);
+```
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/eb6fde33-5a2e-4bc1-9112-add0cf6da41a)
 
 **Question 4**
----
--- Paste Question 4 here
-
-```sql
--- Paste your SQL code below for Question 4
+In the Products table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
 ```
+INSERT INTO Products('ProductID','Name','Category')
+VALUES(106,'Fitness Tracker','Wearables');
 
+INSERT INTO Products('ProductID','Name','Category','Price','Stock')
+VALUES(107,'Laptop','Electronic',999.99,50);
+
+INSERT INTO Products('ProductID','Name','Category','Stock')
+VALUES(108,'Wireless Earbud','Accessorie',100);
+```
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/41f89c2c-d06e-469b-8618-b2730a2f5117)
+
 
 **Question 5**
----
--- Paste Question 5 here
-
-```sql
--- Paste your SQL code below for Question 5
+Write an SQL command can to add a column named email of type TEXT to the customers table
 ```
-
+ALTER TABLE customers ADD COLUMN
+email TEXT;
+```
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/a43ae292-89fd-41e7-b952-c778c3a70d03)
+
 
 **Question 6**
----
--- Paste Question 6 here
-
-```sql
--- Paste your SQL code below for Question 6
+Create a table named ProjectAssignments with the following constraints: AssignmentID as INTEGER should be the primary key. EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID). ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID). AssignmentDate as DATE should be NOT NULL.
 ```
-
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+ProjectID INTEGER,
+AssignmentDate DATE NOT NULL,
+FOREIGN KEY(EmployeeID) REFERENCES Employees(EmployeeID),
+FOREIGN KEY(ProjectID) REFERENCES Projects(ProjectID));
+```
 **Output:**
+![image](https://github.com/user-attachments/assets/2ebfe66d-d665-423c-adcb-f14068e010ce)
 
-![Output6](output.png)
 
 **Question 7**
----
--- Paste Question 7 here
-
-```sql
--- Paste your SQL code below for Question 7
+Insert all books from Out_of_print_books into Books Table attributes are ISBN, Title, Author, Publisher, YearPublished
 ```
-
+INSERT INTO Books(ISBN,Title,Author,Publisher,YearPublished)
+SELECT ISBN, Title, Author, Publisher, YearPublished
+FROM Out_of_print_books;
+```
 **Output:**
+![image](https://github.com/user-attachments/assets/7326fda1-70b9-4a26-9258-a05652f6fa80)
 
-![Output7](output.png)
 
 **Question 8**
----
--- Paste Question 8 here
-
-```sql
--- Paste your SQL code below for Question 8
+Create a new table named contacts with the following specifications: contact_id as INTEGER and primary key. first_name as TEXT and not NULL. last_name as TEXT and not NULL. email as TEXT. phone as TEXT and not NULL with a check constraint to ensure the length of phone is at least 10 characters.
 ```
-
+CREATE TABLE contacts(
+contact_id INTEGER PRIMARY KEY,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+email TEXT,
+phone TEXT NOT NULL CHECK(LENGTH(phone)>9));
+```
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/bf867727-6a7e-4601-8ce3-702c424b01ec)
 
 **Question 9**
----
--- Paste Question 9 here
-
-```sql
--- Paste your SQL code below for Question 9
+ Insert a record with EmployeeID 001, Name Sarah Parker, Position Manager, Department HR, and Salary 60000 into the Employee table.
 ```
-
+INSERT INTO Employee(EmployeeID,Name,Position,Department,Salary)
+VALUES(001,'Sarah Parker','Manager','HR','60000');
+```
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/df8ec515-c9f6-4791-b1a2-f3625e4ac38a)
+
 
 **Question 10**
----
--- Paste Question 10 here
+Write a SQL query to Rename the "city" column to "location" in the "customer" table.
+Sample table: customer
 
-```sql
--- Paste your SQL code below for Question 10
+customer_id | cust_name | city | grade | salesman_id -------------+----------------+------------+-------+------------- 3002 | Nick Rimando | New York | 100 | 5001 3007 | Brad Davis | New York | 200 | 5001 3005 | Graham Zusi | California | 200 | 5002
 ```
-
+ALTER TABLE customer RENAME COLUMN city TO location;
+```
 **Output:**
+![image](https://github.com/user-attachments/assets/59efb98a-1927-48c0-8258-d0afff360ddb)
 
-![Output10](output.png)
-
+## Grade
+![image](https://github.com/user-attachments/assets/7f5672d1-5bdb-47ce-80c3-a4ebe130e3ab)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
