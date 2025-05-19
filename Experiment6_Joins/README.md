@@ -104,11 +104,11 @@ ON
 
 
 **Output:**
-
 ![image](https://github.com/user-attachments/assets/60909471-9819-4e9d-9e5e-5ba4c175d309)
 
 **Question 4**
 ![image](https://github.com/user-attachments/assets/dce86330-d1c5-4632-9d6d-926724c92a05)
+
 ```
 SELECT 
     s.name
@@ -123,7 +123,6 @@ WHERE
 ```
 
 **Output:**
-
 ![image](https://github.com/user-attachments/assets/9a3a30a8-dc3d-4893-966b-d0c5c6b8c35b)
 
 
