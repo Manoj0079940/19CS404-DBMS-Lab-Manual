@@ -79,7 +79,6 @@ SELECT student_name,grade
 FROM GRADES
 WHERE grade IN(SELECT MIN(grade) FROM GRADES AS g WHERE g.subject=GRADES.subject);
 ```
-
 **Output:**
 ![image](https://github.com/user-attachments/assets/7dbcc7b1-0b33-47a6-8563-089de4e5b00b)
 
@@ -191,7 +190,8 @@ WHERE age<(SELECT AVG(age) FROM Employee WHERE income>250000);
 ![image](https://github.com/user-attachments/assets/64a2d4f3-bd73-49a8-95d3-726796e976bf)
 
 ## Grade
-![image](https://github.com/user-attachments/assets/bd837bbe-5dba-4758-ba1b-e40078491a5a)
+![image](https://github.com/user-attachments/assets/445907dd-8136-480a-a257-eca7842ae7ca)
+
 
 
 
