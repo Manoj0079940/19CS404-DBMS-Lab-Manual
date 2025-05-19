@@ -73,14 +73,14 @@ WHERE s.city='New York';
 
 
 **Question 3**
-![image](https://github.com/user-attachments/assets/7535af8d-0978-4e66-91b8-4b75986c4bfe)
+![image](https://github.com/user-attachments/assets/c6a40a29-7180-4e22-bf4c-c72081e1a5f3)
 ```
 SELECT student_name,grade
 FROM GRADES
 WHERE grade IN(SELECT MIN(grade) FROM GRADES AS g WHERE g.subject=GRADES.subject);
 ```
 **Output:**
-![image](https://github.com/user-attachments/assets/7dbcc7b1-0b33-47a6-8563-089de4e5b00b)
+![image](https://github.com/user-attachments/assets/68954723-0ac1-4443-b9d0-4e864406546c)
 
 
 **Question 4**
