@@ -99,8 +99,8 @@ END;
 
 **Output:**  
 The program should display the employee details or an error message.
-![image](https://github.com/user-attachments/assets/c98fba60-dd8f-4217-83de-3be1d84006bb)
 
+![image](https://github.com/user-attachments/assets/c98fba60-dd8f-4217-83de-3be1d84006bb)
 
 ### **Question 2: Parameterized Cursor with Exception Handling**
 
